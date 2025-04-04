@@ -66,9 +66,12 @@ def extract_questions_answers(data):
                         correct_answer = md(option['label'])
                         break
                 
+                conversion = {"i1" : "A", "i2" : "B", "i3" : "C", "i4": "D", "i5": "E"}
+                test = conversion.get(correct_value, "?" )
+                
                 # Write the question and correct answer to Markdown file
                 md_file.write(f"### Question:\n{question_text}\n")
-                md_file.write(f"**Correct Answer:** {correct_answer}\n\n")
+                md_file.write(f"**Correct Answer ({test}): ** {correct_answer}\n\n")
 
 # Main execution logic
 async def main():
