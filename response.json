@@ -1,0 +1,409 @@
+{
+    "meta": {
+        "status": true,
+        "timestamp": 1743732473,
+        "versions": {
+            "requested": "v2023.2.LTS",
+            "mapped": "v1.118",
+            "concrete": "v1.118.9"
+        },
+        "records": 1
+    },
+    "data": {
+        "items": [
+            {
+                "reference": "VH921024---1",
+                "source": {
+                    "reference": "VH921024",
+                    "organisation_id": 537
+                },
+                "content": "<div class=\"row\"><div class=\"col-xs-12\"><span class=\"learnosity-feature feature-_2cfaebcc4a175d14f9ecc9aa5c432da5\"></span><span class=\"learnosity-response question-_c8bea6360c563100c36a65d468e7f2e1\"></span></div></div>",
+                "metadata": {
+                    "rubric_reference": "VH921024_rubric"
+                },
+                "workflow": [],
+                "response_ids": ["_c8bea6360c563100c36a65d468e7f2e1"],
+                "feature_ids": ["_2cfaebcc4a175d14f9ecc9aa5c432da5"],
+                "questions": [
+                    {
+                        "metadata": {
+                            "distractor_rationale_response_level": [
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Correct. Mississippians had mixed agricultural and hunter-gatherer economies that allowed the developed of permanent villages and cities such as Cahokia.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although other pre-Columbian Native American civilizations were nomadic, Mississippians more typically had mixed agricultural and hunter-gatherer economies and developed permanent villages.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although Europeans sometimes perceived Native American societies to be isolated and impermanent communities that left very little trace of their presence, pre-Columbian Mississippian societies lasted several centuries, engaged in long-distance trade, and left behind significant archaeological evidence.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although some Native American societies in the present-day American Southwest utilized advanced irrigation, Mississippians did not, instead cultivating crops in floodplains and otherwise taking advantage of their diverse geography.</p>"
+                            ],
+                            "valid_response_count": 1,
+                            "sheet_reference": "VH921024",
+                            "widget_reference": "VH921024_RESPONSE",
+                            "source": {
+                                "organisation_id": 537
+                            }
+                        },
+                        "stimulus": "<div><include href=\"../Passage/VH921008.qti.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"></include></div><p class=\"stem_paragraph\">Which of the following best characterizes the Mississippian societies described in the excerpt?</p>\n",
+                        "type": "mcq",
+                        "validation": {
+                            "scoring_type": "exactMatch",
+                            "valid_response": {
+                                "score": 1,
+                                "value": ["i1"]
+                            }
+                        },
+                        "options": [
+                            {
+                                "label": "<p class=\"choice_paragraph\">They had mixed agricultural and hunter-gatherer economies that favored the development of permanent villages.</p>",
+                                "value": "i1"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">They were nomadic peoples who utilized river systems to move throughout the region.</p>",
+                                "value": "i2"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">They lived in isolated, impermanent communities and left very little trace of their presence once a settlement had been abandoned.</p>",
+                                "value": "i3"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">They used advanced agricultural practices like irrigation to support economic growth.</p>",
+                                "value": "i4"
+                            }
+                        ],
+                        "response_id": "_c8bea6360c563100c36a65d468e7f2e1"
+                    }
+                ],
+                "features": [
+                    {
+                        "type": "sharedpassage",
+                        "content": "<div class=\"stimulus_reference\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><div class=\"passage\"><div class=\"prose style:1\"><p class=\"passage_para\">“On the western side of the ocean, movements of people and ideas . . . preceded the Atlantic connection. Great empires—in the Valley of Mexico, on the Mississippi River . . . —had collapsed or declined in the centuries before 1492. . . .</p><p class=\"passage_para\">As Columbus embarked on his first transatlantic voyage, the Mexica, or Aztecs, were consolidating their position [in Mexico]; their city was a center of both trade and military might. Tenochtitlán [the Aztec capital] . . . held 200,000 people, a population greater than in the largest city in contemporary Europe.</p><p class=\"passage_para\">“. . . The Mississippian culture spread east and west from its center, the city of Cahokia, on the Mississippi River near the site of modern St. Louis. It was a successor to earlier cultures, evidence of which can be seen in the great ceremonial mounds they built. Cahokia declined and was ultimately abandoned completely in the later thirteenth century. . . . Throughout the Southeast, smaller mound-building centers continued.”</p><p class=\"attribution author\">Karen Ordahl Kupperman, historian, <span class=\"formatted_text font_style:italic\">The Atlantic in World History</span>, 2012</p></div></div></div>",
+                        "feature_id": "_2cfaebcc4a175d14f9ecc9aa5c432da5"
+                    }
+                ],
+                "tags": [
+                    "created_by:CB_AP",
+                    "Subject:FYM US History",
+                    "Unit:1",
+                    "Skill:Skill 1.A: Identify a historical concept, development, or process.",
+                    "Topic:1.2: Native American Societies Before European Contact",
+                    "Assessment Type:Formative",
+                    "Question Type:MCQ",
+                    "Skill Level:Skill Level 1: Identify and Explain Historical Developments and Processes.",
+                    "1_PPC:1.2|Skill 1.A"
+                ]
+            },
+            {
+                "reference": "VH921028---1",
+                "source": {
+                    "reference": "VH921028",
+                    "organisation_id": 537
+                },
+                "content": "<div class=\"row\"><div class=\"col-xs-12\"><span class=\"learnosity-feature feature-_2cfaebcc4a175d14f9ecc9aa5c432da5\"></span><span class=\"learnosity-response question-_51b3b001acdc8d5190dc1780aed62684\"></span></div></div>",
+                "metadata": {
+                    "rubric_reference": "VH921028_rubric"
+                },
+                "workflow": [],
+                "response_ids": ["_51b3b001acdc8d5190dc1780aed62684"],
+                "feature_ids": ["_2cfaebcc4a175d14f9ecc9aa5c432da5"],
+                "questions": [
+                    {
+                        "metadata": {
+                            "distractor_rationale_response_level": [
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Military power was not the primary factor in the development of an advanced society. Advanced societies first had to ensure that they could feed their populations. While the Aztec were noted for military prowess, Mississippian societies were not.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although many groups, including the Mississippians, utilized waterways, this was not a universal characteristic of successful pre-Columbian societies. Using waterways was just one manner in which societies utilized their surroundings. The Aztec capital was not located on a major waterway, for example, but it still became a center of trade.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Correct. Both the Aztec and Mississippian pre-Columbian societies adapted to their environments and exploited their surroundings in order to succeed. Both built large central cities and lasting cultural practices such as mound-building.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Transferring power through inheritance was not necessarily a key factor in pre-Columbian societies’ success. More important than political structure was a society’s ability to feed its population.</p>"
+                            ],
+                            "valid_response_count": 1,
+                            "sheet_reference": "VH921028",
+                            "widget_reference": "VH921028_RESPONSE",
+                            "source": {
+                                "organisation_id": 537
+                            }
+                        },
+                        "stimulus": "<div><include href=\"../Passage/VH921008.qti.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"></include></div><p class=\"stem_paragraph\">Which of the following most directly contributed to the advanced development of both pre-Columbian American societies described in the excerpt?</p>\n",
+                        "type": "mcq",
+                        "validation": {
+                            "scoring_type": "exactMatch",
+                            "valid_response": {
+                                "score": 1,
+                                "value": ["i3"]
+                            }
+                        },
+                        "options": [
+                            {
+                                "label": "<p class=\"choice_paragraph\">Creation of military forces stronger than those of most rival societies</p>",
+                                "value": "i1"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Access to waterways to transport goods and trade with other societies</p>",
+                                "value": "i2"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Adaptation to and use of the natural environment for their own benefit</p>",
+                                "value": "i3"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Transfer of power through inheritance, which reinforced spiritual claims to authority</p>",
+                                "value": "i4"
+                            }
+                        ],
+                        "response_id": "_51b3b001acdc8d5190dc1780aed62684"
+                    }
+                ],
+                "features": [
+                    {
+                        "type": "sharedpassage",
+                        "content": "<div class=\"stimulus_reference\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><div class=\"passage\"><div class=\"prose style:1\"><p class=\"passage_para\">“On the western side of the ocean, movements of people and ideas . . . preceded the Atlantic connection. Great empires—in the Valley of Mexico, on the Mississippi River . . . —had collapsed or declined in the centuries before 1492. . . .</p><p class=\"passage_para\">As Columbus embarked on his first transatlantic voyage, the Mexica, or Aztecs, were consolidating their position [in Mexico]; their city was a center of both trade and military might. Tenochtitlán [the Aztec capital] . . . held 200,000 people, a population greater than in the largest city in contemporary Europe.</p><p class=\"passage_para\">“. . . The Mississippian culture spread east and west from its center, the city of Cahokia, on the Mississippi River near the site of modern St. Louis. It was a successor to earlier cultures, evidence of which can be seen in the great ceremonial mounds they built. Cahokia declined and was ultimately abandoned completely in the later thirteenth century. . . . Throughout the Southeast, smaller mound-building centers continued.”</p><p class=\"attribution author\">Karen Ordahl Kupperman, historian, <span class=\"formatted_text font_style:italic\">The Atlantic in World History</span>, 2012</p></div></div></div>",
+                        "feature_id": "_2cfaebcc4a175d14f9ecc9aa5c432da5"
+                    }
+                ],
+                "tags": [
+                    "created_by:CB_AP",
+                    "Subject:FYM US History",
+                    "Unit:1",
+                    "Skill:Skill 1.A: Identify a historical concept, development, or process.",
+                    "Topic:1.2: Native American Societies Before European Contact",
+                    "Assessment Type:Formative",
+                    "Question Type:MCQ",
+                    "Skill Level:Skill Level 1: Identify and Explain Historical Developments and Processes.",
+                    "1_PPC:1.2|Skill 1.A"
+                ]
+            },
+            {
+                "reference": "VH930290---1",
+                "source": {
+                    "reference": "VH930290",
+                    "organisation_id": 537
+                },
+                "content": "<div class=\"row\"><div class=\"col-xs-12\"><span class=\"learnosity-feature feature-_03aeef9d6a4ae3731fccef45e2342443\"></span><span class=\"learnosity-response question-_f95d6e60b89af0962916c21458de8176\"></span></div></div>",
+                "metadata": {
+                    "rubric_reference": "VH930290_rubric"
+                },
+                "workflow": [],
+                "response_ids": ["_f95d6e60b89af0962916c21458de8176"],
+                "feature_ids": ["_03aeef9d6a4ae3731fccef45e2342443"],
+                "questions": [
+                    {
+                        "metadata": {
+                            "distractor_rationale_response_level": [
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although Native American resistance against European settlement led to conflicts and Hakluyt acknowledges this by mentioning fortifications, this development is not a major issue illustrated by Hakluyt’s <span class=\"formatted_text font_style:italic\">Discourse</span>.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although Europeans enslaved Africans for labor on plantations in the Americas, this development is not illustrated by Hakluyt’s <span class=\"formatted_text font_style:italic\">Discourse</span>. In the 1500s, the use of enslaved African labor on sugar plantations was primarily concentrated in the West Indies, and the English had not yet become major participants in the slave trade.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Correct. In his <span class=\"formatted_text font_style:italic\">Discourse</span>, Hakluyt argues that England should establish fortified colonies in the Americas in order to trade for valuable commercial commodities, which was one means by which Europeans sought new wealth from the Americas in the 1500s.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although European missionaries did travel to the Americas seeking to convert Native Americans to different strains of Christianity, this development is not illustrated by Hakluyt’s <span class=\"formatted_text font_style:italic\">Discourse</span>. In the 1500s, the European missionary activities were more typical of Spanish colonies than of the proposed English colonies.</p>"
+                            ],
+                            "valid_response_count": 1,
+                            "sheet_reference": "VH930290",
+                            "widget_reference": "VH930290_RESPONSE",
+                            "source": {
+                                "organisation_id": 537
+                            }
+                        },
+                        "stimulus": "<div><include href=\"../Passage/VH930286.qti.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"></include></div><p class=\"stem_paragraph\">Which of the following developments in the 1500s is best illustrated by the excerpt?</p>\n",
+                        "type": "mcq",
+                        "validation": {
+                            "scoring_type": "exactMatch",
+                            "valid_response": {
+                                "score": 1,
+                                "value": ["i3"]
+                            }
+                        },
+                        "options": [
+                            {
+                                "label": "<p class=\"choice_paragraph\">European settlers faced resistance from Native Americans.</p>",
+                                "value": "i1"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Europeans transported enslaved Africans to the Americas to produce sugar.</p>",
+                                "value": "i2"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Europeans sought new sources of wealth in the Americas.</p>",
+                                "value": "i3"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">European missionaries traveled to the Americas seeking religious converts.</p>",
+                                "value": "i4"
+                            }
+                        ],
+                        "response_id": "_f95d6e60b89af0962916c21458de8176"
+                    }
+                ],
+                "features": [
+                    {
+                        "type": "sharedpassage",
+                        "content": "<div class=\"stimulus_reference\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><div class=\"passage\"><div class=\"prose style:1\"><p class=\"passage_para\">“The second chief and principal end [of colonization] . . . consists in the [sale] of the mass of our clothes and other commodities of England, and in receiving back of the needful commodities that we now receive from all other places of the world. . . . This one thing is to be done, without which it were in vain to go about this; and that is the matter of planting [colonies] and fortification. . . . We are to plant upon the mouths of the great navigable rivers which are there [in America], by strong order of fortification, and there to plant our colonies. . . . And these fortifications shall keep the [native] people of [America] in obedience and good order. . . .</p><p class=\"passage_para\">“. . . Without this planting in due time, we shall never be able to have full knowledge of the language, manners, and customs of the people of those regions. . . . And although by other means we might attain to the knowledge thereof, yet being not there fortified and strongly seated, the French that swarm with [a] multitude of people, or other nations, might secretly fortify and settle themselves before us.”</p><p class=\"attribution author\">Richard Hakluyt, English government official, <span class=\"formatted_text font_style:italic\">A Discourse on Western Planting</span>, 1584</p></div></div></div>",
+                        "feature_id": "_03aeef9d6a4ae3731fccef45e2342443"
+                    }
+                ],
+                "tags": [
+                    "created_by:CB_AP",
+                    "Subject:FYM US History",
+                    "Unit:1",
+                    "Skill:Skill 1.A: Identify a historical concept, development, or process.",
+                    "Topic:1.3: European Exploration in the Americas",
+                    "Assessment Type:Formative",
+                    "Question Type:MCQ",
+                    "Skill Level:Skill Level 1: Identify and Explain Historical Developments and Processes.",
+                    "1_PPC:1.3|Skill 1.A"
+                ]
+            },
+            {
+                "reference": "VH930291---1",
+                "source": {
+                    "reference": "VH930291",
+                    "organisation_id": 537
+                },
+                "content": "<div class=\"row\"><div class=\"col-xs-12\"><div class=\"learnosity-feature\" data-type=\"scrollablepassage\" data-height=\"100%\"><span class=\"learnosity-feature feature-_03aeef9d6a4ae3731fccef45e2342443\"></span><span class=\"learnosity-response question-_f34403758e827ecc38c71e5400c12a4f\"></span></div></div></div>",
+                "metadata": {
+                    "rubric_reference": "VH930291_rubric"
+                },
+                "workflow": [],
+                "response_ids": ["_f34403758e827ecc38c71e5400c12a4f"],
+                "feature_ids": ["_03aeef9d6a4ae3731fccef45e2342443"],
+                "questions": [
+                    {
+                        "metadata": {
+                            "distractor_rationale_response_level": [
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Correct. In order to pursue commercial relationships with Native Americans, European officials such as Hakluyt advocated that Europeans learn Native American languages and study Native American cultures.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Maize cultivation was not introduced to the Americas through cultural exchanges between Europeans and Native Americans. Maize cultivation in the Americas predated European contact by thousands of years.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Hakluyt does not discuss enslaving Native Americans in his <span class=\"formatted_text font_style:italic\">Discourse</span>. Although Europeans did enslave Native Americans in many parts of the Americas, Native American slavery was generally displaced by other labor systems over time, and few enslaved Native Americans were transported to Europe.</p>\n",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. In the early years of colonization, Europeans generally sought alliances with Native Americans in order to protect against attacks from other Native American groups or rival Europeans. Hakluyt’s discussion in the <span class=\"formatted_text font_style:italic\">Discourse </span>on learning about Native American languages and cultures illustrates the European desire to establish partnerships with native peoples.</p>"
+                            ],
+                            "valid_response_count": 1,
+                            "sheet_reference": "VH930291",
+                            "widget_reference": "VH930291_RESPONSE",
+                            "source": {
+                                "organisation_id": 537
+                            }
+                        },
+                        "stimulus": "<div><include href=\"../Passage/VH930286.qti.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"></include></div><p class=\"stem_paragraph\">Hakluyt’s call for the English to learn about Native American “language, manners, and customs” best represents which of the following developments in the 1500s?</p>\n",
+                        "type": "mcq",
+                        "validation": {
+                            "scoring_type": "exactMatch",
+                            "valid_response": {
+                                "score": 1,
+                                "value": ["i1"]
+                            }
+                        },
+                        "options": [
+                            {
+                                "label": "<p class=\"choice_paragraph\">Native Americans and Europeans partnered for trade.</p>",
+                                "value": "i1"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Europeans introduced maize cultivation to the Americas.</p>",
+                                "value": "i2"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Native Americans were sent in large numbers into slavery in Europe.</p>",
+                                "value": "i3"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Europeans refused defensive military alliances with Native Americans.</p>",
+                                "value": "i4"
+                            }
+                        ],
+                        "ui_style": {
+                            "type": "horizontal"
+                        },
+                        "response_id": "_f34403758e827ecc38c71e5400c12a4f"
+                    }
+                ],
+                "features": [
+                    {
+                        "type": "sharedpassage",
+                        "content": "<div class=\"stimulus_reference\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><div class=\"passage\"><div class=\"prose style:1\"><p class=\"passage_para\">“The second chief and principal end [of colonization] . . . consists in the [sale] of the mass of our clothes and other commodities of England, and in receiving back of the needful commodities that we now receive from all other places of the world. . . . This one thing is to be done, without which it were in vain to go about this; and that is the matter of planting [colonies] and fortification. . . . We are to plant upon the mouths of the great navigable rivers which are there [in America], by strong order of fortification, and there to plant our colonies. . . . And these fortifications shall keep the [native] people of [America] in obedience and good order. . . .</p><p class=\"passage_para\">“. . . Without this planting in due time, we shall never be able to have full knowledge of the language, manners, and customs of the people of those regions. . . . And although by other means we might attain to the knowledge thereof, yet being not there fortified and strongly seated, the French that swarm with [a] multitude of people, or other nations, might secretly fortify and settle themselves before us.”</p><p class=\"attribution author\">Richard Hakluyt, English government official, <span class=\"formatted_text font_style:italic\">A Discourse on Western Planting</span>, 1584</p></div></div></div>",
+                        "feature_id": "_03aeef9d6a4ae3731fccef45e2342443"
+                    }
+                ],
+                "tags": [
+                    "created_by:CB_AP",
+                    "Subject:FYM US History",
+                    "Unit:1",
+                    "Skill:Skill 1.A: Identify a historical concept, development, or process.",
+                    "Topic:1.3: European Exploration in the Americas",
+                    "Assessment Type:Formative",
+                    "Question Type:MCQ",
+                    "Skill Level:Skill Level 1: Identify and Explain Historical Developments and Processes.",
+                    "1_PPC:1.3|Skill 1.A"
+                ]
+            },
+            {
+                "reference": "VH930259---1",
+                "source": {
+                    "reference": "VH930259",
+                    "organisation_id": 537
+                },
+                "content": "<div class=\"row\"><div class=\"col-xs-12\"><span class=\"learnosity-feature feature-_207dbbc405f2e3794bcb5559b8c104b4\"></span><span class=\"learnosity-response question-_dde797f4c4f6c5508f859efb3c09d368\"></span></div></div>",
+                "metadata": {
+                    "rubric_reference": "VH930259_rubric"
+                },
+                "workflow": [],
+                "response_ids": ["_dde797f4c4f6c5508f859efb3c09d368"],
+                "feature_ids": ["_207dbbc405f2e3794bcb5559b8c104b4"],
+                "questions": [
+                    {
+                        "metadata": {
+                            "distractor_rationale_response_level": [
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although Native Americans adapted to diverse geographical environments across the Americas and developed complex societies, this development is not described in the excerpt.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although some Native American groups sought alliances with European colonizers to advance their conquest of rival powers, this development is not described in the excerpt.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Incorrect. Although European groups persecuted for their religious beliefs, such as the Huguenots and the Puritans, established separatist colonial settlements in the Americas, this development was not a goal of the Spanish colonizers as described in the excerpt.</p>",
+                                "<p class=\"rationale_paragraph\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">Correct. The encounters between the Arawak Indians and Christopher Columbus described in the excerpt resulted from voyages made by Columbus and other Europeans seeking westerly access to eastern luxury goods or sources of material wealth in the Americas beginning in 1492.</p>"
+                            ],
+                            "valid_response_count": 1,
+                            "sheet_reference": "VH930259",
+                            "widget_reference": "VH930259_RESPONSE",
+                            "source": {
+                                "organisation_id": 537
+                            }
+                        },
+                        "stimulus": "<div><include href=\"../Passage/VH930255.qti.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"></include></div><p class=\"stem_paragraph\">Which of the following developments in the late 1400s and early 1500s is depicted in the excerpt?</p>\n",
+                        "type": "mcq",
+                        "validation": {
+                            "scoring_type": "exactMatch",
+                            "valid_response": {
+                                "score": 1,
+                                "value": ["i4"]
+                            }
+                        },
+                        "options": [
+                            {
+                                "label": "<p class=\"choice_paragraph\">Native Americans adapted to diverse geographical environments and developed complex societies.</p>",
+                                "value": "i1"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Alliances with Europeans aided some Native American societies in their efforts to conquer rival powers.</p>",
+                                "value": "i2"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Europeans persecuted for their religious beliefs established new separatist settlements in the Americas.</p>",
+                                "value": "i3"
+                            },
+                            {
+                                "label": "<p class=\"choice_paragraph\">Europeans undertook voyages across the Atlantic to the Americas in search of new sources of wealth.</p>",
+                                "value": "i4"
+                            }
+                        ],
+                        "response_id": "_dde797f4c4f6c5508f859efb3c09d368"
+                    }
+                ],
+                "features": [
+                    {
+                        "type": "sharedpassage",
+                        "content": "<div class=\"stimulus_reference\" xmlns=\"http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><div class=\"passage\"><div class=\"prose style:1\"><p class=\"passage_para\">“The isolation of the [native peoples] of the Americas . . . from Old World germs prior to the last few hundred years was nearly absolute. Not only did very few people of any origin cross the great oceans, but those who did must have been healthy or they would have died on the way, taking their pathogens with them. . . . [Native Americans] were not without their own infections, of course. [But Native Americans] seem to have been without any experience with such Old World maladies as smallpox [and] measles. . . .</p><p class=\"passage_para\">“Indications of the susceptibility of [Native Americans] . . . to Old World infections appear almost immediately after the intrusion of the whites. In 1492, Columbus kidnapped a number of [Arawak Indians] to train as interpreters and to show to King Ferdinand and Queen Isabella. Several of them seem to have died on the stormy voyage to Europe [in 1493]. . . . In 1495, Columbus . . . sent 550 [Arawak] slaves . . . off across the Atlantic. . . to be put to work in Spain. The majority of these soon were also dead. . . .</p><p class=\"passage_para\">“. . . What killed the Arawaks in 1493 and 1495? . . . Columbus certainly did not want to kill his interpreters, and slavers and slaveholders have no interest whatever in the outright slaughter of their property. . . . The most likely candidates for the role of exterminator of the first [Native Americans] in Europe were those that killed so many other Arawaks in the decades immediately following: Old World pathogens.”</p><p class=\"attribution author\">Alfred W. Crosby, historian, <span class=\"formatted_text font_style:italic\">Ecological Imperialism: The Biological Expansion of Europe, 900–1900</span>, published in 1986</p></div></div></div>",
+                        "feature_id": "_207dbbc405f2e3794bcb5559b8c104b4"
+                    }
+                ],
+                "tags": [
+                    "created_by:CB_AP",
+                    "Subject:FYM US History",
+                    "Unit:1",
+                    "Skill:Skill 1.A: Identify a historical concept, development, or process.",
+                    "Topic:1.3: European Exploration in the Americas",
+                    "Assessment Type:Formative",
+                    "Question Type:MCQ",
+                    "Skill Level:Skill Level 1: Identify and Explain Historical Developments and Processes.",
+                    "1_PPC:1.3|Skill 1.A"
+                ]
+            }
+        ]
+    }
+}
