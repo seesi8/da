@@ -12,6 +12,9 @@ if not os.path.exists("./token.txt"):
 with open("./token.txt") as file:
     BEARERTOKEN = file.read()
 
+
+STUDENTID = input("Enter your student ID: ")
+
 # Function to extract IDs from a JSON string
 def extract_ids(json_str):
     data = json.loads(json_str)
@@ -275,19 +278,18 @@ async def main():
     }""",
         "variables": {
             "assignmentId": assignmentId,
-            "studentId": "228490232",
+            "studentId": STUDENTID,
             "includePriorStudents": None,
             "masterSubjectId": "1",
-            "scrambledStudentId": "228490232"
+            "scrambledStudentId": STUDENTID
         },
         "operationName": "getSignedAssignmentResultRequest"
     }
     response = requests.post(url, json=data, headers=headers)
     data = response.json()
-    print(json.dumps(data, indent=2))
 
     studentResponses = data["data"]["assignment"]["studentResponses"]
-
+    print(studentResponses)
     new_ids = extract_ids(studentResponses)
     
     query_string = "action=get&security={\"consumer_key\":\"gHpBBB2lEYn2EDoS\",\"domain\":\"apclassroom.collegeboard.org\",\"timestamp\":\"20250404-0245\",\"user_id\":\"228490232\",\"signature\":\"$02$300926dca276e6d2b35aa50d6c91940466ef47f5b61f46562674a7cb2a7f6f24\"}&request={\"user_id\":\"228490232\",\"session_id\":\"\",\"retrieve_tags\":true,\"organisation_id\":537,\"dynamic_items\":{\"data_table_seed\":\"seed\",\"seed_with_item_id\":true}}&usrequest={\"items\":[{\"id\":\"VH921024---1\",\"reference\":\"VH921024\"},{\"id\":\"VH921028---1\",\"reference\":\"VH921028\"},{\"id\":\"VH930290---1\",\"reference\":\"VH930290\"},{\"id\":\"VH930291---1\",\"reference\":\"VH930291\"},{\"id\":\"VH930259---1\",\"reference\":\"VH930259\"}]}"
