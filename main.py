@@ -4,6 +4,8 @@ import json
 import requests
 from markdownify import markdownify as md
 import os
+import time
+
 
 if not os.path.exists("./token.txt"):
     raise FileNotFoundError("\n token.txt does not exist \n Please create a new file named \"token.txt\" with your token (ex. Bearer XXXXX) inside")
@@ -11,15 +13,16 @@ if not os.path.exists("./token.txt"):
 
 with open("./token.txt") as file:
     BEARERTOKEN = file.read()
+    
+# ASSIGNMENTID = "63276724"
+ASSIGNMENTID = input("Enter your assignment ID: ")
 
-
+# STUDENTID = "228490232"
 STUDENTID = input("Enter your student ID: ")
 
 # Function to extract IDs from a JSON string
 def extract_ids(json_str):
-    data = json.loads(json_str)
-    first_key = next(iter(data))
-    ids = [key for key, _ in data[first_key].items() if key != "questions"]
+    ids = [item["learnosityItemReference"] for item in json_str]
     return ids
 
 # Function to replace items in the query string with new IDs
@@ -31,7 +34,7 @@ def replace_items(query, new_ids):
     pre_items = query[:items_start + 8]
     post_items = query[items_start:].split(']', 1)[1]
 
-    new_items = [{'id': f'{id}---1', 'reference': id} for id in new_ids]
+    new_items = [{'id': f'hi{n}', 'reference': id} for n , id in enumerate(new_ids)]
     new_items_str = json.dumps(new_items)
 
     return f'{pre_items}{new_items_str}{post_items}'
@@ -78,7 +81,9 @@ def extract_questions_answers(data):
 
 # Main execution logic
 async def main():
-    assignmentId = input("Assignment ID: ")
+    # assignmentId = input("Assignment ID: ")
+    start_time = time.time()
+
     url = "https://apc-api-production.collegeboard.org/fym/graphql"
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:137.0) Gecko/20100101 Firefox/137.0",
@@ -277,7 +282,7 @@ async def main():
     }
     }""",
         "variables": {
-            "assignmentId": assignmentId,
+            "assignmentId": ASSIGNMENTID,
             "studentId": STUDENTID,
             "includePriorStudents": None,
             "masterSubjectId": "1",
@@ -285,17 +290,24 @@ async def main():
         },
         "operationName": "getSignedAssignmentResultRequest"
     }
+
     response = requests.post(url, json=data, headers=headers)
     data = response.json()
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Elapsed time: {elapsed_time} seconds")
+    # print(data)
 
-    studentResponses = data["data"]["assignment"]["studentResponses"]
-    print(studentResponses)
+    studentResponses = data["data"]["assignment"]["questions"]
     new_ids = extract_ids(studentResponses)
+    # print(new_ids)
     
     query_string = "action=get&security={\"consumer_key\":\"gHpBBB2lEYn2EDoS\",\"domain\":\"apclassroom.collegeboard.org\",\"timestamp\":\"20250404-0245\",\"user_id\":\"228490232\",\"signature\":\"$02$300926dca276e6d2b35aa50d6c91940466ef47f5b61f46562674a7cb2a7f6f24\"}&request={\"user_id\":\"228490232\",\"session_id\":\"\",\"retrieve_tags\":true,\"organisation_id\":537,\"dynamic_items\":{\"data_table_seed\":\"seed\",\"seed_with_item_id\":true}}&usrequest={\"items\":[{\"id\":\"VH921024---1\",\"reference\":\"VH921024\"},{\"id\":\"VH921028---1\",\"reference\":\"VH921028\"},{\"id\":\"VH930290---1\",\"reference\":\"VH930290\"},{\"id\":\"VH930291---1\",\"reference\":\"VH930291\"},{\"id\":\"VH930259---1\",\"reference\":\"VH930259\"}]}"
     new_query_string = replace_items(query_string, new_ids)
     result = await fetch_items(new_query_string)
+    # print(result)
     extract_questions_answers(json.loads(result))
+
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
