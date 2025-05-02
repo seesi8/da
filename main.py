@@ -5,39 +5,55 @@ import requests
 from markdownify import markdownify as md
 import os
 import time
-
+from markdown_pdf import MarkdownPdf
+from markdown_pdf import Section
 
 if not os.path.exists("./token.txt"):
     raise FileNotFoundError("\n token.txt does not exist \n Please create a new file named \"token.txt\" with your token (ex. Bearer XXXXX) inside")
 
-
 with open("./token.txt") as file:
     BEARERTOKEN = file.read()
     
-# ASSIGNMENTID = "63276724"
+# ASSIGNMENTID = "63245204"
 ASSIGNMENTID = input("Enter your assignment ID: ")
 
 # STUDENTID = "228490232"
 STUDENTID = input("Enter your student ID: ")
+
+import urllib.parse
+
+
+def percent_encode(text):
+    return urllib.parse.quote(text, safe='')
+
 
 # Function to extract IDs from a JSON string
 def extract_ids(json_str):
     ids = [item["learnosityItemReference"] for item in json_str]
     return ids
 
+
 # Function to replace items in the query string with new IDs
 def replace_items(query, new_ids):
-    items_start = query.find("\"items\":")
+    # Limiting the number of new_ids to 5
+    new_ids = new_ids
+
+    # Finding the starting position of "%22items%22%3A"
+    items_start = query.find("%22items%22%3A")
     if items_start == -1:
         return query
 
-    pre_items = query[:items_start + 8]
-    post_items = query[items_start:].split(']', 1)[1]
+    # Splitting the query to get the part before and after the items array
+    pre_items = query[:items_start + 8]  # 8 is the length of "%22items%22%3A"
+    post_items = query[items_start:].split('%5D', 1)[1]  # Splitting at the first occurrence of '%5D' (closing bracket of the array)
 
-    new_items = [{'id': f'hi{n}', 'reference': id} for n , id in enumerate(new_ids)]
-    new_items_str = json.dumps(new_items)
+    # Creating the new items list as a JSON string
+    new_items = [{'id': id, 'reference': id} for id in new_ids]
+    new_items_str = percent_encode(json.dumps(new_items))
 
-    return f'{pre_items}{new_items_str}{post_items}'
+    # Return the modified query with the new items
+    return f'{pre_items}%22%3A{new_items_str}{post_items}'
+
 
 # Async function to fetch items using aiohttp
 async def fetch_items(data):
@@ -59,6 +75,7 @@ async def fetch_items(data):
 # Function to extract questions and convert HTML to Markdown, then save to a Markdown file
 def extract_questions_answers(data):
     with open('output.md', 'w') as md_file:
+        # print(data)
         items = data['data']['items']  # Navigate to the 'items' list in the data
         for item in items:
             for question in item['questions']:
@@ -72,12 +89,20 @@ def extract_questions_answers(data):
                         correct_answer = md(option['label'])
                         break
                 
-                conversion = {"i1" : "A", "i2" : "B", "i3" : "C", "i4": "D", "i5": "E"}
-                test = conversion.get(correct_value, "?" )
+                conversion = {"i1": "A", "i2": "B", "i3": "C", "i4": "D", "i5": "E"}
+                test = conversion.get(correct_value, "?")
                 
                 # Write the question and correct answer to Markdown file
                 md_file.write(f"### Question:\n{question_text}\n")
-                md_file.write(f"**Correct Answer ({test}): ** {correct_answer}\n\n")
+                md_file.write(f"**Correct Answer ({test}):** {correct_answer}\n\n")
+    open('output.pdf', 'w').close()
+
+    with open('output.md', 'r') as md_file:
+        
+        pdf = MarkdownPdf(toc_level=2, optimize=True)
+        pdf.add_section(Section(md_file.read(), toc=False))
+        pdf.save("output.pdf")
+
 
 # Main execution logic
 async def main():
@@ -295,17 +320,17 @@ async def main():
     data = response.json()
     end_time = time.time()
     elapsed_time = end_time - start_time
-    print(f"Elapsed time: {elapsed_time} seconds")
     # print(data)
+    print(f"Elapsed time: {elapsed_time} seconds")
 
     studentResponses = data["data"]["assignment"]["questions"]
     new_ids = extract_ids(studentResponses)
-    # print(new_ids)
-    
-    query_string = "action=get&security={\"consumer_key\":\"gHpBBB2lEYn2EDoS\",\"domain\":\"apclassroom.collegeboard.org\",\"timestamp\":\"20250404-0245\",\"user_id\":\"228490232\",\"signature\":\"$02$300926dca276e6d2b35aa50d6c91940466ef47f5b61f46562674a7cb2a7f6f24\"}&request={\"user_id\":\"228490232\",\"session_id\":\"\",\"retrieve_tags\":true,\"organisation_id\":537,\"dynamic_items\":{\"data_table_seed\":\"seed\",\"seed_with_item_id\":true}}&usrequest={\"items\":[{\"id\":\"VH921024---1\",\"reference\":\"VH921024\"},{\"id\":\"VH921028---1\",\"reference\":\"VH921028\"},{\"id\":\"VH930290---1\",\"reference\":\"VH930290\"},{\"id\":\"VH930291---1\",\"reference\":\"VH930291\"},{\"id\":\"VH930259---1\",\"reference\":\"VH930259\"}]}"
+
+    # query_string = "action=get&security" + json.dumps(security) + "=&request={\"user_id\":\"228490232\",\"session_id\":\"\",\"retrieve_tags\":true,\"organisation_id\":537,\"dynamic_items\":{\"data_table_seed\":\"seed\",\"seed_with_item_id\":true}}&usrequest={\"items\":[{\"id\":\"VH921024---1\",\"reference\":\"VH921024\"},{\"id\":\"VH921028---1\",\"reference\":\"VH921028\"},{\"id\":\"VH930290---1\",\"reference\":\"VH930290\"},{\"id\":\"VH930291---1\",\"reference\":\"VH930291\"},{\"id\":\"VH930259---1\",\"reference\":\"VH930259\"}]}"
+    with open("querystring.txt", "r") as file:
+        query_string = file.read()
     new_query_string = replace_items(query_string, new_ids)
     result = await fetch_items(new_query_string)
-    # print(result)
     extract_questions_answers(json.loads(result))
 
 

